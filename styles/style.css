@@ -1,0 +1,50 @@
+:root{
+    --couleur-foret: #228B22;
+    --couleur-olive: #556B2F;
+    --couleur-marron: #8B4513;
+    --couleur-beige: #F5F5DC;
+    --couleur-myrtille: #4B0082;
+    --couleur-creme: #FFD700;
+}
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url("../images/logo_modifie.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1{
+    display: inline-block;
+    
+}
+nav{
+    text-align: center;
+    float: right;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+}
+img{
+    height: 100px;
+}
+section{
+    background-color: white;
+    height: 400px;
+    margin-top: 8800px;
+    margin-bottom: 10px;
+}
+article{
+    margin-top: 400px;
+    background-color: white;
+    height: 400px;
+}
