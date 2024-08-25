@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'New Amsterdam', sans-serif;
+}
+body{
+    background: url("../images/logo_modifie.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/*HEADER*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15%;
+    box-shadow: rgba(0,0,0,0.1) 0 0 10px;
+    background-color: white;
+}
+.logo{
+    font-size: 45px;
+    position: relative;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+ul li{
+    margin: 0 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.5s;
+    border-radius: 6px;
+    position: relative;
+}
+a::before{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: black;
+    transition: 0.5s;
+}
+a:hover::before{
+    width: 100%;
+}
+a::after {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+a:hover{
+    background-color: black;
+    color: white;
+}
+@media (max-width: 638px) {
+    .logo{
+        margin-left: -15%;
+    }
+    ul{
+        margin-right: -25%;
+    }
+}
+@media (max-width: 462px){
+    body{
+        position: relative;
+    }
+    header{
+        padding: 10px 20px;
+    }
+    .logo{
+        margin-left: 0;
+    }
+    ul{
+        flex-direction: column;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.8);
+        top: 0;
+        left: -1500px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        transition: 0.5s;
+    }
+    ul li{
+        margin: 20px 0;
+    }
+    ul li a{
+        text-transform: uppercase;
+    }
+    .button{
+        width: 40px;
+        height: 40px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .button::after{
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        box-shadow: 0 10px 0 #000;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+    .button.active::after{
+        box-shadow: 0 0 0 #000;
+        transform: rotate(45deg);
+    }
+    .button::before{
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .button.active::before{
+        transform: rotate(-45deg);
+    }
+    ul.active{
+        left: 0;
+    }
+    @media (max-width: 219px){
+        .logo{
+            font-size: 30px;
+        }
+        .button{
+            height: 30px;
+            width: 30px;
+        }
+        .button::after{
+            width: 15px;
+            height: 2px;
+            box-shadow: 0 10px 0 #000;
+        }
+        .button::before{
+            width: 15px;
+            height: 2px;
+        }
+    }
+}

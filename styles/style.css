@@ -17,18 +17,24 @@ h1{
     font-size: 4vw;
     margin: 0;
     padding: 0;
-    margin-left: 10px;
+    margin-left: 5%;
     position: relative;
     animation: showTitre 4s ease-in-out, infiniteMove 4s ease-in-out alternate infinite;
     transition: transform 2s;
 }
 @keyframes showTitre {
-    0% {right:50%}
-    100%{right: 0}
+    0% {
+        right:50%;
+        color: white;
+    }
+    100%{
+        right: 0;
+        color: black;
+    }
 }
 @keyframes infiniteMove{
-    0%{transform: scale(1);}
-    100%{transform: scale(1.1);}
+    0%{transform: scale(1);color: white;text-shadow: 0px 0px 5px black;}
+    100%{transform: scale(1.1);color: black;text-shadow: 0px 0px 5px white;}
 }
 
 nav{
@@ -36,6 +42,8 @@ nav{
     padding: 0;
     text-align: center;
     align-items: center;
+    position: relative;
+    bottom: 10px;
     float: right;
 }
 nav ul{
@@ -44,37 +52,68 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
+    animation: showLien 3s;
+    position: relative;
+}
+@keyframes showLien{
+    0%{bottom: 300px;}
+    100%{bottom: 0;}
 }
 nav ul li a{
     padding: 0 20px;
     margin: 0;
     text-decoration: none;
     color: white;
-    font-size: 25px;
-    transition: border 2s;
+    font-size: 3vw;
+    transition: color 2s;
 }
 nav ul li a:hover{
-    transition: border 2s;
-    animation: showLien 4s alternate infinite ease-in-out;
-}
-@keyframes showLien {
-    0% {
-        width: 0px;
-        border-right: 4px solid white;
-        border-left: 4px solid white;
-        box-shadow: 0px 0px 20px white;
-    }
-
-    100% {
-        width: 100%;
-    }
+    color: black;
+    text-shadow: 0px 0px 10px white;
 }
 header{
     border-bottom: 4px solid white;
+    height: 5vw;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(5px);
-    transition: backdrop-filter 2s;
+    transition: backdrop-filter 2s, border-bottom 2s;
+    animation: showHeader 3s ;
 }
 header:hover{
     backdrop-filter: blur(15px);
+}
+@keyframes showHeader {
+    0%{
+        backdrop-filter: blur(0);
+        background: none;
+        border: none;
+    }
+    100%{
+        backdrop-filter: blur(15px);
+        background: rgba(255, 255, 255, 0.4);
+        border-bottom: 4px solid white;
+    }
+}
+@media (min-width: 768px){
+    body{
+        position: relative;
+    }
+    header{
+        padding: 10px 20px;
+    }
+    ul{
+        flex-direction: column;
+    }
+}
+/*SECTION*/
+section{
+    height: 500px;
+    margin: 20px 0;
+    backdrop-filter: blur(15px);
+}
+article{
+    height: 500px;
+    margin: 20px 0;
+    background-color: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
 }
