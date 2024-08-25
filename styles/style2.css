@@ -10,6 +10,7 @@ body{
     background: url("../images/logo_modifie.jpg");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -67,7 +68,6 @@ a::after {
     background-color: black;
     transition: 0.5s;
 }
-
 a:hover::after {
     width: 100%;
 }
@@ -75,6 +75,16 @@ a:hover{
     background-color: black;
     color: white;
 }
+
+/*HERO SECTION*/
+#hero_section{
+    height: 700px;
+    margin-top: 700px;
+    background-color: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+/*RESPONSIVE*/
 @media (max-width: 638px) {
     .logo{
         margin-left: -15%;
@@ -83,7 +93,7 @@ a:hover{
         margin-right: -25%;
     }
 }
-@media (max-width: 462px){
+@media (max-width: 800px){
     body{
         position: relative;
     }
@@ -96,7 +106,7 @@ a:hover{
     ul{
         flex-direction: column;
         position: absolute;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.7);
         top: 0;
         left: -1500px;
         width: 100%;
@@ -104,7 +114,7 @@ a:hover{
         display: flex;
         align-items: center;
         justify-content: center;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(5px);
         transition: 0.5s;
     }
     ul li{
@@ -152,7 +162,7 @@ a:hover{
     ul.active{
         left: 0;
     }
-    @media (max-width: 219px){
+    @media (max-width: 277px){
         .logo{
             font-size: 30px;
         }
