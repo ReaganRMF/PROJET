@@ -28,7 +28,15 @@ header {
     font-size: 45px;
     position: relative;
 }
-
+.logo img {
+    height: 40px;
+    display: inline-block;
+}
+.logo h6{
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+}
 ul {
     list-style: none;
     display: flex;
@@ -149,6 +157,7 @@ a:hover {
         justify-content: center;
         backdrop-filter: blur(5px);
         transition: 0.5s;
+        z-index: 100;
     }
 
     ul li {
@@ -167,7 +176,7 @@ a:hover {
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        z-index: 100;
+        z-index: 200;
     }
 
     .button::after {
