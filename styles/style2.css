@@ -142,7 +142,26 @@ p {
     background-color: #EAE2D2;
     transition: 0.3s ease-out;
     overflow: hidden;
-    width: 50%;
+    width: 0%;
+}
+.home_abou_us img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+.home_button button:last-child{
+    margin-left: 15px;
+}
+.home_button button:last-child:focus .home_abou_us{
+    width: 52%;
+    border-left: 1px solid #5e493a;
+}
+.home_button button:last-child{
+    margin-left: 15px;
+}
+.home_button button:last-child:focus .home_abou-us{
+    width: 52%;
+    border-left: 1px solid #5e493a;
 }
 
 
