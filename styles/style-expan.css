@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+:root {
+    --primary-color: #8b0000;
+    --secondary-color: #f9f5f0;
+    --text-color: #333;
+}
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'New Amsterdam', sans-serif;
 }
 
@@ -21,8 +27,8 @@ header {
     align-items: center;
     padding: 20px 15%;
     box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
-    background-color: rgb(255, 255, 255,0.5);
-    backdrop-filter: blur(5px);
+    background-color: rgb(255, 255, 255, 0.8);
+
 }
 
 .logo {
@@ -124,6 +130,279 @@ a:hover {
     border-radius: 15px;
     box-shadow: 0 0 8px white;
 }
+/*MAIN*/
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeInDown 1s ease-out, colorChange 10s infinite;
+}
+
+.wine-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    opacity: 0.2;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.wine-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.wine-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: calc(33.33% - 1rem);
+    opacity: 0;
+    transform: translateY(50px);
+    position: relative;
+}
+
+.wine-card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.wine-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.wine-card:hover .wine-image {
+    transform: scale(1.1);
+}
+
+.wine-info {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.5s;
+}
+
+.cta-button:hover:before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    background-color: #6d0000;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes sway {
+
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes colorChange {
+
+    0%,
+    100% {
+        color: #fff;
+    }
+
+    33% {
+        color: #ffd700;
+    }
+
+    66% {
+        color: #ff6347;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wine-card {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wine-card {
+        width: 100%;
+    }
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        bottom: 1080px;
+        transform: translateX(-200px);
+    }
+}
+
+.wine-drop {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0;
+    animation: drop 2s linear infinite;
+}
+
+@keyframes drop {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+.sparkle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 1.5s linear infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.cork-pop {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #8B4513;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 1000;
+    animation: corkPop 2s ease-out;
+}
+
+@keyframes corkPop {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(300px, -300px) rotate(720deg);
+        opacity: 0;
+    }
+}
 
 
 /*RESPONSIVE*/
@@ -217,6 +496,9 @@ a:hover {
 
     ul.active {
         left: 0;
+    }
+
+    #acceuil{
     }
 
     @media (max-width: 277px) {
