@@ -1,78 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/style-expan.css">
-        <title>Glardino-king</title>
-        <link rel="shortcut icon" href="images/logo-site3.ico"
-            type="image/x-icon">
-    </head>
-    <body>
-        <!--HEADER-->
-        <header>
-            <div class="logo">
-                <img src="images/logo_no_background.png" alt>
-                <h6>Glardino-king</h6>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style-expan.css">
+    <title>Glardino-king</title>
+    <link rel="shortcut icon" href="images/logo-site3.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!--HEADER-->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <a href="#" class="logo">Giardino King</a>
             </div>
-            <div class="button"></div>
-            <ul class="menu">
-                <li><a id="lien1" href="index.html">Accueil</a></li>
-                <li><a id="lien2" href="#">Contact</a></li>
-                <li><a id="lien3" href="#">Apropos</a></li>
-            </ul>
-            <svg class="wine-animation" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill="#ffffff"
-                    d="M12,20A6,6 0 0,1 6,14C6,10 12,3.25 12,3.25C12,3.25 18,10 18,14A6,6 0 0,1 12,20Z">
-                    <animate attributeName="d" dur="4s" repeatCount="indefinite"
-                        values="M12,20A6,6 0 0,1 6,14C6,10 12,3.25 12,3.25C12,3.25 18,10 18,14A6,6 0 0,1 12,20Z;
-                    M12,20A6,6 0 0,1 6,14C6,10 12,8 12,8C12,8 18,10 18,14A6,6 0 0,1 12,20Z;
-                    M12,20A6,6 0 0,1 6,14C6,10 12,3.25 12,3.25C12,3.25 18,10 18,14A6,6 0 0,1 12,20Z" />
-                </path>
-            </svg>
-        </header>
-        <!--SECTION Héroîque-->
-        <section id="accueil">
-            <div class="presentation">
-                <p>Découvrez Giardino King, l'apéritif qui réinvente l'art de la
-                    dégustation. Issu d'un subtil mélange de vin rouge et
-                    d'essences naturelles de fruits du jardin, ce breuvage offre
-                    une expérience gustative inoubliable. Laissez-vous séduire
-                    par ses arômes envoûtants et sa douceur raffinée</p>
-            </div>
-            <div class="image_div">
-                <img src="images/image3.jpg" alt="logo-vin">
-            </div>
-        </section>
-        <!--GALERIE-->
-        <div class="container">
+            <nav>
+                <div class="menu-icon">&#9776;</div>
+                <ul>
+                    <li><a href="#accueil" class="active">Accueil</a></li>
+                    <li><a href="#nos-vins">Nos Vins</a></li>
+                    <li><a href="#degustation">Dégustation</a></li>
+                    <li><a href="#terroir">Terroir</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--SECTION Héroîque-->
+    <section id="accueil">
+        <div class="presentation">
+            <p>Découvrez Giardino King, l'apéritif qui réinvente l'art de la
+                dégustation. Issu d'un subtil mélange de vin rouge et
+                d'essences naturelles de fruits du jardin, ce breuvage offre
+                une expérience gustative inoubliable. Laissez-vous séduire
+                par ses arômes envoûtants et sa douceur raffinée</p>
+        </div>
+        <div class="image_div">
+            <img src="images/image3.jpg" alt="logo-vin">
+        </div>
+    </section>
+    <!--GALERIE-->
+    <div class="container">
         <div class="gallery-wrapper fade-in">
             <div class="gallery">
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="https://replicate.delivery/yhqm/wM7qPHdX2KbOLlxUejWBcIO0TC5uEsX8k1wUoEQRpkUUbXrJA/out-0.webp" alt="Dégustation de vin rouge dans un vignoble au coucher du soleil" width="800" height="400">
+                        <img src="https://replicate.delivery/yhqm/wM7qPHdX2KbOLlxUejWBcIO0TC5uEsX8k1wUoEQRpkUUbXrJA/out-0.webp"
+                            alt="Dégustation de vin rouge dans un vignoble au coucher du soleil" width="800"
+                            height="400">
                         <div class="gallery-caption">
                             <h3>L'Art de la Dégustation</h3>
                             <p>Savourez un vin rouge exquis au cœur d'un vignoble pittoresque.</p>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://replicate.delivery/yhqm/sI7yflicbtRbDasQRfSQkfhqhTWKY1CWyz3d7YfLomEja7aNB/out-0.webp " alt="Assortiment de fromages et de vins blancs" width="800" height="400">
+                        <img src="https://replicate.delivery/yhqm/sI7yflicbtRbDasQRfSQkfhqhTWKY1CWyz3d7YfLomEja7aNB/out-0.webp "
+                            alt="Assortiment de fromages et de vins blancs" width="800" height="400">
                         <div class="gallery-caption">
                             <h3>Harmonie des Saveurs</h3>
                             <p>Découvrez l'accord parfait entre vins blancs raffinés et fromages délicats.</p>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://replicate.delivery/yhqm/XzmTrrQODdpOOZVdCo7GtQGGMchf0fCegnjkZ76pTaiRtdtmA/out-0.webp" alt="Cave à vin ancienne avec des fûts de chêne" width="800" height="400">
+                        <img src="https://replicate.delivery/yhqm/XzmTrrQODdpOOZVdCo7GtQGGMchf0fCegnjkZ76pTaiRtdtmA/out-0.webp"
+                            alt="Cave à vin ancienne avec des fûts de chêne" width="800" height="400">
                         <div class="gallery-caption">
                             <h3>Le Sanctuaire du Vin</h3>
                             <p>Explorez les secrets d'une cave à vin traditionnelle où le temps sublime les arômes.</p>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://replicate.delivery/yhqm/Q6GQiZ8QQkaECJpGYHzpltqRksGt1xqnOho69Qer6MaUbXrJA/out-0.webp" alt="Grappes de raisin mûr sur la vigne au lever du soleil" width="800" height="400">
+                        <img src="https://replicate.delivery/yhqm/Q6GQiZ8QQkaECJpGYHzpltqRksGt1xqnOho69Qer6MaUbXrJA/out-0.webp"
+                            alt="Grappes de raisin mûr sur la vigne au lever du soleil" width="800" height="400">
                         <div class="gallery-caption">
                             <h3>L'Origine Divine</h3>
                             <p>Admirez la beauté des grappes de raisin, source de tous les grands vins.</p>
@@ -85,126 +93,161 @@
             </div>
         </div>
     </div>
-        <!--SECTION MAIN-->
-        <main>
-            <section class="wine-section">
-                <div class="wine-card">
-                    <img
-                        src="images/article1.jpeg"
-                        alt="Bouteille de vin rouge sur une table en bois rustique"
-                        class="wine-image" width="400" height="250">
-                    <div class="wine-info">
-                        <h2>Château Margaux 2015</h2>
-                        <p>Un vin rouge exquis avec des notes de fruits rouges
-                            et une finale soyeuse.</p>
-                        <a href="/chateau-margaux-2015"
-                            class="cta-button">Découvrir</a>
-                    </div>
+    <!--SECTION MAIN-->
+    <main>
+        <section class="wine-section">
+            <div class="wine-card">
+                <img src="images/article1.jpeg" alt="Bouteille de vin rouge sur une table en bois rustique"
+                    class="wine-image" width="400" height="250">
+                <div class="wine-info">
+                    <h2>Château Margaux 2015</h2>
+                    <p>Un vin rouge exquis avec des notes de fruits rouges
+                        et une finale soyeuse.</p>
+                    <a href="/chateau-margaux-2015" class="cta-button">Découvrir</a>
                 </div>
-                <div class="wine-card">
-                    <img
-                        src="images/article2.jpeg"
-                        alt="Verre de vin blanc dans un vignoble ensoleillé"
-                        class="wine-image" width="400" height="250">
-                    <div class="wine-info">
-                        <h2>Chablis Grand Cru 2018</h2>
-                        <p>Un vin blanc élégant aux arômes minéraux et une
-                            fraîcheur remarquable.</p>
-                        <a href="/chablis-grand-cru-2018"
-                            class="cta-button">Explorer</a>
-                    </div>
+            </div>
+            <div class="wine-card">
+                <img src="images/article2.jpeg" alt="Verre de vin blanc dans un vignoble ensoleillé" class="wine-image"
+                    width="400" height="250">
+                <div class="wine-info">
+                    <h2>Chablis Grand Cru 2018</h2>
+                    <p>Un vin blanc élégant aux arômes minéraux et une
+                        fraîcheur remarquable.</p>
+                    <a href="/chablis-grand-cru-2018" class="cta-button">Explorer</a>
                 </div>
-                <div class="wine-card">
-                    <img
-                        src="images/article3.jpeg"
-                        alt="Bouteille de vin rosé avec des verres sur une terrasse"
-                        class="wine-image" width="400" height="250">
-                    <div class="wine-info">
-                        <h2>Provence Rosé 2020</h2>
-                        <p>Un rosé rafraîchissant aux notes de fruits d'été et
-                            une finale croquante.</p>
-                        <a href="/provence-rose-2020"
-                            class="cta-button">Savourer</a>
-                    </div>
+            </div>
+            <div class="wine-card">
+                <img src="images/article3.jpeg" alt="Bouteille de vin rosé avec des verres sur une terrasse"
+                    class="wine-image" width="400" height="250">
+                <div class="wine-info">
+                    <h2>Provence Rosé 2020</h2>
+                    <p>Un rosé rafraîchissant aux notes de fruits d'été et
+                        une finale croquante.</p>
+                    <a href="/provence-rose-2020" class="cta-button">Savourer</a>
                 </div>
-            </section>
-            <div class="info-card">
-                <h2>Les Types de Vin <span class="color-change">🍷</span></h2>
-                <p>Il existe quatre types principaux de vin :</p>
-                <ul>
-                    <li>Rouge : fait à partir de raisins noirs, fermenté avec la
-                        peau</li>
-                    <li>Blanc : généralement fait à partir de raisins
-                        blancs</li>
-                    <li>Rosé : fait à partir de raisins noirs, contact limité
-                        avec la peau</li>
-                    <li>Pétillant : contient du dioxyde de carbone, comme le
-                        champagne</li>
-                </ul>
             </div>
+        </section>
+        <div class="info-card">
+            <h2>Les Types de Vin <span class="color-change">🍷</span></h2>
+            <p>Il existe quatre types principaux de vin :</p>
+            <ul>
+                <li>Rouge : fait à partir de raisins noirs, fermenté avec la
+                    peau</li>
+                <li>Blanc : généralement fait à partir de raisins
+                    blancs</li>
+                <li>Rosé : fait à partir de raisins noirs, contact limité
+                    avec la peau</li>
+                <li>Pétillant : contient du dioxyde de carbone, comme le
+                    champagne</li>
+            </ul>
+        </div>
 
-            <div class="info-card">
-                <h2>La Dégustation <span class="floating-grape">🍇</span></h2>
-                <p>Pour bien déguster un vin, suivez ces étapes :</p>
-                <ol>
-                    <li>Regardez la couleur et la clarté</li>
-                    <li>Sentez les arômes</li>
-                    <li>Goûtez en faisant rouler le vin dans votre bouche</li>
-                    <li>Évaluez la finale (le goût qui persiste)</li>
-                </ol>
-            </div>
+        <div class="info-card">
+            <h2>La Dégustation <span class="floating-grape">🍇</span></h2>
+            <p>Pour bien déguster un vin, suivez ces étapes :</p>
+            <ol>
+                <li>Regardez la couleur et la clarté</li>
+                <li>Sentez les arômes</li>
+                <li>Goûtez en faisant rouler le vin dans votre bouche</li>
+                <li>Évaluez la finale (le goût qui persiste)</li>
+            </ol>
+        </div>
 
-            <div class="info-card">
-                <h2>L'Accord Mets et Vins <div class="swirl"></div></h2>
-                <p>Quelques principes de base :</p>
-                <ul>
-                    <li>Vin rouge avec viandes rouges</li>
-                    <li>Vin blanc avec poissons et volailles</li>
-                    <li>Rosé avec salades et grillades légères</li>
-                    <li>Champagne avec desserts ou en apéritif</li>
-                </ul>
-            </div>
+        <div class="info-card">
+            <h2>L'Accord Mets et Vins <div class="swirl"></div>
+            </h2>
+            <p>Quelques principes de base :</p>
+            <ul>
+                <li>Vin rouge avec viandes rouges</li>
+                <li>Vin blanc avec poissons et volailles</li>
+                <li>Rosé avec salades et grillades légères</li>
+                <li>Champagne avec desserts ou en apéritif</li>
+            </ul>
+        </div>
 
-            <div class="info-card">
-                <h2>La Conservation <span class="color-change">🍾</span></h2>
-                <p>Pour bien conserver votre vin :</p>
-                <ul>
-                    <li>Gardez-le dans un endroit frais et sombre</li>
-                    <li>Conservez les bouteilles couchées (sauf le
-                        champagne)</li>
-                    <li>Évitez les fluctuations de température</li>
-                    <li>Consommez le vin blanc et rosé plus jeune que le
-                        rouge</li>
-                </ul>
-            </div>
-        </main>
-        <!--CONTACT-->
+        <div class="info-card">
+            <h2>La Conservation <span class="color-change">🍾</span></h2>
+            <p>Pour bien conserver votre vin :</p>
+            <ul>
+                <li>Gardez-le dans un endroit frais et sombre</li>
+                <li>Conservez les bouteilles couchées (sauf le
+                    champagne)</li>
+                <li>Évitez les fluctuations de température</li>
+                <li>Consommez le vin blanc et rosé plus jeune que le
+                    rouge</li>
+            </ul>
+        </div>
+    </main>
+    <!--CONTACT-->
+    <section class="contactez">
         <div class="contact-container">
-        <h1>Contactez-nous</h1>
-        <form id="email-form">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Envoyer l'email</button>
-        </form>
+            <h1>Contactez-nous</h1>
+            <form id="email-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
 
-        <button id="whatsapp-btn" class="whatsapp-btn">
-            <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-            </svg>
-            Contacter par WhatsApp
-        </button>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
 
-        <div id="status-message"></div>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Envoyer l'email</button>
+            </form>
+
+            <button id="whatsapp-btn" class="whatsapp-btn">
+                <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                </svg>
+                Contacter par WhatsApp
+            </button>
+
+            <div id="status-message"></div>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><span class="wine-icon">🍷</span>À propos de Vin Divin</h3>
+                <p>Chez Vin Divin, nous croyons que chaque bouteille raconte une histoire. Notre passion pour le vin nous pousse à sélectionner les meilleurs crus pour vous offrir une expérience gustative inoubliable.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Nos Vins</h3>
+                <ul>
+                    <li><i class="fas fa-wine-bottle"></i>Rouges d'exception</li>
+                    <li><i class="fas fa-wine-glass-alt"></i>Blancs rafraîchissants</li>
+                    <li><i class="fas fa-glass-cheers"></i>Champagnes & Effervescents</li>
+                    <li><i class="fas fa-store"></i>Vins de garde</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i>123 Rue du Vin, 75001 Paris</li>
+                    <li><i class="fas fa-phone"></i>+33 1 23 45 67 89</li>
+                    <li><i class="fas fa-envelope"></i>contact@vindivin.com</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="developer-info">
+        <img src="dev-logo.svg" alt="Logo du développeur" class="developer-logo">
+        <p>Conçu avec passion par Reagan Musiana Fukibulu</p>
     </div>
-        <!--SCRIPT-->
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script src="scripts/script.js"></script>
-    </body>
+    <!--SCRIPT-->
+    <!-- Inclusion de Font Awesome pour les icônes -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
 </html>
