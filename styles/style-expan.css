@@ -739,15 +739,6 @@ p {
     padding: 2rem;
 }
 
-/*header {
-    background: linear-gradient(135deg, var(--primary-color), #4A0E0E);
-    color: var(--light-color);
-    text-align: center;
-    padding: 3rem 0;
-    position: relative;
-    overflow: hidden;
-}*/
-
 h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3.5rem;
