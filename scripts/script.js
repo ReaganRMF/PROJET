@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(card);
     });
 
-    // Ajouter des bulles animées dans le header
+    /*// Ajouter des bulles animées dans le header
     const header = document.querySelector("header");
     for (let i = 0; i < 20; i++) {
         const bubble = document.createElement("div");
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bubble.style.animationDuration = `${Math.random() * 5 + 5}s`;
         bubble.style.animationDelay = `${Math.random() * 5}s`;
         header.appendChild(bubble);
-    }
+    }*/
 
     // Animation de flottement pour les cartes de vin
     wineCards.forEach((card) => {
@@ -121,5 +121,110 @@ document.addEventListener("DOMContentLoaded", () => {
                 cork.remove();
             }, 2000);
         }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const wineGlass = document.querySelector(".wine");
+    const infoCards = document.querySelectorAll(".info-card");
+
+    // Remplir progressivement le verre de vin
+    setTimeout(() => {
+        wineGlass.style.height = "60px";
+    }, 1000);
+
+    // Faire apparaître les cartes d'information
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    infoCards.forEach((card) => {
+        observer.observe(card);
+    });
+
+    // Ajouter des raisins flottants
+    const main = document.querySelector("main");
+    for (let i = 0; i < 5; i++) {
+        const grape = document.createElement("span");
+        grape.textContent = "🍇";
+        grape.classList.add("floating-grape");
+        grape.style.left = `${Math.random() * 100}%`;
+        grape.style.top = `${Math.random() * 100}%`;
+        grape.style.animationDelay = `${Math.random() * 2}s`;
+        main.appendChild(grape);
+    }
+
+    // Ajouter des tourbillons
+    for (let i = 0; i < 3; i++) {
+        const swirl = document.createElement("div");
+        swirl.classList.add("swirl");
+        swirl.style.left = `${Math.random() * 100}%`;
+        swirl.style.top = `${Math.random() * 100}%`;
+        swirl.style.animationDelay = `${Math.random() * 2}s`;
+        main.appendChild(swirl);
+    }
+});
+document.addEventListener("DOMContentLoaded", (event) => {
+    const gallery = document.querySelector(".gallery-container");
+    const prevBtn = document.querySelector(".gallery-nav.prev");
+    const nextBtn = document.querySelector(".gallery-nav.next");
+    const dotsContainer = document.querySelector(".gallery-dots");
+    const items = document.querySelectorAll(".gallery-item");
+    let currentIndex = 0;
+
+    // Create dots
+    items.forEach((_, index) => {
+        const dot = document.createElement("div");
+        dot.classList.add("gallery-dot");
+        if (index === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => showImage(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll(".gallery-dot");
+
+    function showImage(index) {
+        gallery.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
+        });
+        currentIndex = index;
+    }
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        showImage(currentIndex);
+    });
+
+    // Auto-scroll
+    let interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % items.length;
+        showImage(currentIndex);
+    }, 5000);
+
+    // Pause auto-scroll on hover
+    const galleryWrapper = document.querySelector(".gallery-wrapper");
+    galleryWrapper.addEventListener("mouseenter", () => {
+        clearInterval(interval);
+    });
+
+    galleryWrapper.addEventListener("mouseleave", () => {
+        interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % items.length;
+            showImage(currentIndex);
+        }, 5000);
     });
 });

@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
 :root {
     --primary-color: #8b0000;
     --secondary-color: #f9f5f0;
     --text-color: #333;
+    --primary-color: #8B0000;
+    --secondary-color: #F8E9D2;
+    --accent-color: #FFD700;
+    --text-color: #2C1A1D;
+    --light-color: #FFF9F0;
 }
 
 * {
@@ -35,15 +41,18 @@ header {
     font-size: 45px;
     position: relative;
 }
+
 .logo img {
     height: 40px;
     display: inline-block;
 }
-.logo h6{
+
+.logo h6 {
     display: inline-block;
     position: relative;
     bottom: 10px;
 }
+
 ul {
     list-style: none;
     display: flex;
@@ -101,12 +110,13 @@ a:hover {
 }
 
 /*HERO SECTION*/
-#accueil{
+#accueil {
     display: flex;
     overflow: hidden;
     backdrop-filter: blur(10px);
     flex-wrap: wrap;
 }
+
 .presentation {
     color: white;
     flex: 1 200px;
@@ -116,7 +126,8 @@ a:hover {
     margin: auto 55px;
     justify-content: center;
 }
-.image_div{
+
+.image_div {
     flex: 1 200px;
     height: 300px;
     width: 350px;
@@ -124,12 +135,14 @@ a:hover {
     align-items: center;
     margin: 15px 55px;
 }
-.image_div img{
+
+.image_div img {
     height: 100%;
     width: 100%;
     border-radius: 15px;
     box-shadow: 0 0 8px white;
 }
+
 /*MAIN*/
 h1 {
     font-family: 'Playfair Display', serif;
@@ -151,6 +164,8 @@ h1 {
 }
 
 main {
+    background-color: rgb(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
@@ -404,6 +419,355 @@ p {
     }
 }
 
+/*CARDS*/
+.info-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.wine-glass {
+    width: 100px;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+    animation: tilt 3s infinite ease-in-out;
+}
+
+.glass {
+    width: 70px;
+    height: 100px;
+    border: 3px solid #000;
+    border-top: none;
+    border-radius: 0 0 35px 35px;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+
+.stem {
+    width: 6px;
+    height: 50px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 47px;
+}
+
+.base {
+    width: 50px;
+    height: 10px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    border-radius: 50%;
+}
+
+.wine {
+    width: 64px;
+    height: 0;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 3px;
+    left: 18px;
+    border-radius: 0 0 32px 32px;
+    transition: height 2s ease;
+}
+
+@keyframes tilt {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.floating-grape {
+    font-size: 2rem;
+    position: absolute;
+    animation: float 3s infinite ease-in-out;
+}
+
+.color-change {
+    animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: var(--primary-color);
+    }
+
+    33% {
+        color: var(--accent-color);
+    }
+
+    66% {
+        color: #1a5f7a;
+    }
+
+    100% {
+        color: var(--primary-color);
+    }
+}
+
+.swirl {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    animation: swirl 4s infinite linear;
+}
+
+@keyframes swirl {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.5);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+
+
+
+
+/*GALERIE*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/*header {
+    background: linear-gradient(135deg, var(--primary-color), #4A0E0E);
+    color: var(--light-color);
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}*/
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.wine-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background: url('wine-pattern.svg') repeat;
+    animation: wineBg 60s linear infinite;
+}
+
+@keyframes wineBg {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.gallery-wrapper {
+    background-color: var(--light-color);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-container {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+    height: 100%;
+}
+
+.gallery-item {
+    flex: 0 0 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--light-color);
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.gallery-nav:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.gallery-nav.prev {
+    left: 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.gallery-nav.next {
+    right: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.gallery-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.gallery-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-dot.active {
+    background-color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .gallery {
+        height: 300px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+
+
+
+
+
+
 
 /*RESPONSIVE*/
 @media (max-width: 638px) {
@@ -498,8 +862,6 @@ p {
         left: 0;
     }
 
-    #acceuil{
-    }
 
     @media (max-width: 277px) {
         .logo {

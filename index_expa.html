@@ -21,6 +21,16 @@
                 <li><a id="lien2" href="#">Contact</a></li>
                 <li><a id="lien3" href="#">Apropos</a></li>
             </ul>
+            <svg class="wine-animation" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff"
+                    d="M12,20A6,6 0 0,1 6,14C6,10 12,3.25 12,3.25C12,3.25 18,10 18,14A6,6 0 0,1 12,20Z">
+                    <animate attributeName="d" dur="4s" repeatCount="indefinite"
+                        values="M12,20A6,6 0 0,1 6,14C6,10 12,3.25 12,3.25C12,3.25 18,10 18,14A6,6 0 0,1 12,20Z;
+                    M12,20A6,6 0 0,1 6,14C6,10 12,8 12,8C12,8 18,10 18,14A6,6 0 0,1 12,20Z;
+                    M12,20A6,6 0 0,1 6,14C6,10 12,3.25 12,3.25C12,3.25 18,10 18,14A6,6 0 0,1 12,20Z" />
+                </path>
+            </svg>
         </header>
         <!--SECTION Héroîque-->
         <section id="accueil">
@@ -35,6 +45,46 @@
                 <img src="images/image3.jpg" alt="logo-vin">
             </div>
         </section>
+        <!--GALERIE-->
+        <div class="container">
+        <div class="gallery-wrapper fade-in">
+            <div class="gallery">
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="https://replicate.delivery/yhqm/wM7qPHdX2KbOLlxUejWBcIO0TC5uEsX8k1wUoEQRpkUUbXrJA/out-0.webp" alt="Dégustation de vin rouge dans un vignoble au coucher du soleil" width="800" height="400">
+                        <div class="gallery-caption">
+                            <h3>L'Art de la Dégustation</h3>
+                            <p>Savourez un vin rouge exquis au cœur d'un vignoble pittoresque.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://replicate.delivery/yhqm/sI7yflicbtRbDasQRfSQkfhqhTWKY1CWyz3d7YfLomEja7aNB/out-0.webp " alt="Assortiment de fromages et de vins blancs" width="800" height="400">
+                        <div class="gallery-caption">
+                            <h3>Harmonie des Saveurs</h3>
+                            <p>Découvrez l'accord parfait entre vins blancs raffinés et fromages délicats.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://replicate.delivery/yhqm/XzmTrrQODdpOOZVdCo7GtQGGMchf0fCegnjkZ76pTaiRtdtmA/out-0.webp" alt="Cave à vin ancienne avec des fûts de chêne" width="800" height="400">
+                        <div class="gallery-caption">
+                            <h3>Le Sanctuaire du Vin</h3>
+                            <p>Explorez les secrets d'une cave à vin traditionnelle où le temps sublime les arômes.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://replicate.delivery/yhqm/Q6GQiZ8QQkaECJpGYHzpltqRksGt1xqnOho69Qer6MaUbXrJA/out-0.webp" alt="Grappes de raisin mûr sur la vigne au lever du soleil" width="800" height="400">
+                        <div class="gallery-caption">
+                            <h3>L'Origine Divine</h3>
+                            <p>Admirez la beauté des grappes de raisin, source de tous les grands vins.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="gallery-nav prev">&#10094;</button>
+                <button class="gallery-nav next">&#10095;</button>
+                <div class="gallery-dots"></div>
+            </div>
+        </div>
+    </div>
         <!--SECTION MAIN-->
         <main>
             <section class="wine-section">
@@ -78,6 +128,55 @@
                     </div>
                 </div>
             </section>
+            <div class="info-card">
+                <h2>Les Types de Vin <span class="color-change">🍷</span></h2>
+                <p>Il existe quatre types principaux de vin :</p>
+                <ul>
+                    <li>Rouge : fait à partir de raisins noirs, fermenté avec la
+                        peau</li>
+                    <li>Blanc : généralement fait à partir de raisins
+                        blancs</li>
+                    <li>Rosé : fait à partir de raisins noirs, contact limité
+                        avec la peau</li>
+                    <li>Pétillant : contient du dioxyde de carbone, comme le
+                        champagne</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>La Dégustation <span class="floating-grape">🍇</span></h2>
+                <p>Pour bien déguster un vin, suivez ces étapes :</p>
+                <ol>
+                    <li>Regardez la couleur et la clarté</li>
+                    <li>Sentez les arômes</li>
+                    <li>Goûtez en faisant rouler le vin dans votre bouche</li>
+                    <li>Évaluez la finale (le goût qui persiste)</li>
+                </ol>
+            </div>
+
+            <div class="info-card">
+                <h2>L'Accord Mets et Vins <div class="swirl"></div></h2>
+                <p>Quelques principes de base :</p>
+                <ul>
+                    <li>Vin rouge avec viandes rouges</li>
+                    <li>Vin blanc avec poissons et volailles</li>
+                    <li>Rosé avec salades et grillades légères</li>
+                    <li>Champagne avec desserts ou en apéritif</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>La Conservation <span class="color-change">🍾</span></h2>
+                <p>Pour bien conserver votre vin :</p>
+                <ul>
+                    <li>Gardez-le dans un endroit frais et sombre</li>
+                    <li>Conservez les bouteilles couchées (sauf le
+                        champagne)</li>
+                    <li>Évitez les fluctuations de température</li>
+                    <li>Consommez le vin blanc et rosé plus jeune que le
+                        rouge</li>
+                </ul>
+            </div>
         </main>
         <!--SCRIPT-->
         <script src="scripts/script.js"></script>
