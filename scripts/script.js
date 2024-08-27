@@ -21,19 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(card);
     });
 
-    /*// Ajouter des bulles animées dans le header
-    const header = document.querySelector("header");
-    for (let i = 0; i < 20; i++) {
-        const bubble = document.createElement("div");
-        bubble.classList.add("bubble");
-        bubble.style.left = `${Math.random() * 100}%`;
-        bubble.style.width = `${Math.random() * 30 + 10}px`;
-        bubble.style.height = bubble.style.width;
-        bubble.style.animationDuration = `${Math.random() * 5 + 5}s`;
-        bubble.style.animationDelay = `${Math.random() * 5}s`;
-        header.appendChild(bubble);
-    }*/
-
     // Animation de flottement pour les cartes de vin
     wineCards.forEach((card) => {
         card.addEventListener("mouseover", () => {
@@ -399,5 +386,141 @@ document.addEventListener("DOMContentLoaded", (event) => {
             end: "bottom top",
             toggleActions: "play none none reverse",
         },
+    });
+});
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate sections
+    gsap.utils.toArray(".section").forEach((section, index) => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top 70%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        tl.to(section, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
+        })
+            .to(
+                section.querySelector("h2"),
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                },
+                "-=0.6"
+            )
+            .to(
+                section.querySelectorAll("p"),
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    stagger: 0.2,
+                },
+                "-=0.6"
+            )
+            .to(
+                section.querySelector(".btn"),
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                },
+                "-=0.4"
+            )
+            .to(
+                section.querySelectorAll(".highlight"),
+                {
+                    backgroundSize: "100% 0.3em",
+                    duration: 0.8,
+                    stagger: 0.2,
+                },
+                "-=0.8"
+            );
+
+        if (index % 2 === 0) {
+            tl.from(
+                section.querySelector("img"),
+                {
+                    x: -100,
+                    opacity: 0,
+                    duration: 1,
+                },
+                "-=1"
+            );
+        } else {
+            tl.from(
+                section.querySelector("img"),
+                {
+                    x: 100,
+                    opacity: 0,
+                    duration: 1,
+                },
+                "-=1"
+            );
+        }
+    });
+
+    // Parallax effect
+    gsap.utils.toArray(".image-container").forEach((container) => {
+        gsap.to(container, {
+            yPercent: -30,
+            ease: "none",
+            scrollTrigger: {
+                trigger: container,
+                scrub: true,
+            },
+        });
+    });
+
+    // Floating animation for the first image
+    gsap.to(".float-animation", {
+        y: -20,
+        rotation: 2,
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+    });
+
+    // Bubble animation
+    const bubblesContainer = document.querySelector(".bubbles");
+    for (let i = 0; i < 20; i++) {
+        const bubble = document.createElement("div");
+        bubble.classList.add("bubble");
+        bubble.style.left = `${Math.random() * 100}%`;
+        bubble.style.width = `${Math.random() * 20 + 10}px`;
+        bubble.style.height = bubble.style.width;
+        bubble.style.animationDelay = `${Math.random() * 4}s`;
+        bubblesContainer.appendChild(bubble);
+    }
+
+    // Text reveal animation
+    gsap.utils.toArray("p").forEach((p) => {
+        let words = p.textContent.split(" ");
+        p.innerHTML = words
+            .map((word) => `<span class="word">${word}</span>`)
+            .join(" ");
+
+        gsap.from(p.querySelectorAll(".word"), {
+            opacity: 0,
+            y: 20,
+            duration: 0.5,
+            stagger: 0.05,
+            scrollTrigger: {
+                trigger: p,
+                start: "top 80%",
+                toggleActions: "play none none reverse",
+            },
+        });
     });
 });
