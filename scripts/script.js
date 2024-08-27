@@ -228,3 +228,66 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }, 5000);
     });
 });
+
+(function () {
+    emailjs.init("QRjp7UxToZssAA_Lk");
+
+    const form = document.getElementById("email-form");
+    const statusMessage = document.getElementById("status-message");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const submitButton = form.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.textContent = "Envoi en cours...";
+
+        emailjs.sendForm("service_1u6gp6v", "template_2nski1k", this).then(
+            function () {
+                showStatus("Message envoyé avec succès !", "success");
+                form.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = "Envoyer l'email";
+            },
+            function (error) {
+                showStatus(
+                    "Erreur lors de l'envoi du message. Veuillez réessayer.",
+                    "error"
+                );
+                submitButton.disabled = false;
+                submitButton.textContent = "Envoyer l'email";
+            }
+        );
+    });
+
+    document
+        .getElementById("whatsapp-btn")
+        .addEventListener("click", function () {
+            const phoneNumber = "+243813297352";
+            const message = encodeURIComponent(
+                "Bonjour, je vous contacte à propos de vos vins."
+            );
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+        });
+
+    function showStatus(message, type) {
+        statusMessage.textContent = message;
+        statusMessage.className = type;
+        statusMessage.classList.add("show-status");
+
+        setTimeout(() => {
+            statusMessage.classList.remove("show-status");
+        }, 5000);
+    }
+
+    // Animations des champs de formulaire
+    const inputs = document.querySelectorAll("input, textarea");
+    inputs.forEach((input) => {
+        input.addEventListener("focus", function () {
+            this.style.transform = "scale(1.02)";
+        });
+        input.addEventListener("blur", function () {
+            this.style.transform = "scale(1)";
+        });
+    });
+})();
