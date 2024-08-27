@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         submitButton.disabled = true;
         submitButton.textContent = "Envoi en cours...";
 
-        emailjs.sendForm("service_1u6gp6v", "template_2nski1k", this).then(
+        emailjs.sendForm("service_1u6gp6v", "template_y69f6ei", this).then(
             function () {
                 showStatus("Message envoyé avec succès !", "success");
                 form.reset();
