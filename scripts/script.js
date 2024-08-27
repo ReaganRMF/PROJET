@@ -318,16 +318,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
         false
     );
 
-    // Smooth scroll for anchor links
+    /*/ Smooth scroll for anchor links
     links.forEach((link) => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
             let target = document.querySelector(this.getAttribute("href"));
             gsap.to(window, { duration: 1, scrollTo: target });
         });
-    });
+    });*/
 
-    // Update active link on scroll
+    
+    
+    /*// Update active link on scroll
     function updateActiveLink() {
         let fromTop = window.scrollY + header.offsetHeight + 1;
 
@@ -345,7 +347,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     }
 
-    window.addEventListener("scroll", updateActiveLink);
+    window.addEventListener("scroll", updateActiveLink);*/
 
     // Progress bar
     function updateProgressBar() {

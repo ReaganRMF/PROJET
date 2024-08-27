@@ -1348,7 +1348,7 @@ button:hover::after {
     width: 100%;
 }
 
-.footer-section p,
+.footer-section #dev-name,
 .footer-section ul {
     font-size: 0.9em;
     line-height: 1.6;
