@@ -91,10 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const wineGlass = document.querySelector(".wine");
     const infoCards = document.querySelectorAll(".info-card");
 
-    // Remplir progressivement le verre de vin
+    /*// Remplir progressivement le verre de vin
     setTimeout(() => {
         wineGlass.style.height = "60px";
-    }, 1000);
+    }, 1000);*/
 
     // Faire apparaître les cartes d'information
     const observer = new IntersectionObserver(
