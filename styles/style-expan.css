@@ -98,19 +98,24 @@ a:hover {
     display: flex;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    flex-wrap: wrap;
 }
 .presentation {
-    text-shadow: 0 0 2px white;
+    color: white;
+    flex: 1 200px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
-    margin: auto 15px;
+    margin: auto 55px;
     justify-content: center;
 }
 .image_div{
-    flex: 1 1000px;
+    flex: 1 200px;
+    height: 300px;
+    width: 350px;
     justify-content: center;
     align-items: center;
-    margin: 15px 10px;
+    margin: 15px 55px;
 }
 .image_div img{
     height: 100%;
@@ -211,6 +216,9 @@ a:hover {
 
     ul.active {
         left: 0;
+    }
+
+    #acceuil{
     }
 
     @media (max-width: 277px) {
