@@ -53,12 +53,12 @@ header {
     bottom: 10px;
 }
 
-ul {
+.menu {
     list-style: none;
     display: flex;
 }
 
-ul li {
+.menu li {
     margin: 0 10px;
 }
 
@@ -775,7 +775,7 @@ h1 {
         margin-left: -15%;
     }
 
-    ul {
+    .menu {
         margin-right: -25%;
     }
 }
@@ -793,7 +793,7 @@ h1 {
         margin-left: 0;
     }
 
-    ul {
+    .menu {
         flex-direction: column;
         position: absolute;
         background-color: rgba(255, 255, 255, 0.7);
@@ -809,11 +809,11 @@ h1 {
         z-index: 100;
     }
 
-    ul li {
+    .menu li {
         margin: 20px 0;
     }
 
-    ul li a {
+    .menu li a {
         text-transform: uppercase;
     }
 
@@ -858,7 +858,7 @@ h1 {
         transform: rotate(-45deg);
     }
 
-    ul.active {
+    .menu.active {
         left: 0;
     }
 
