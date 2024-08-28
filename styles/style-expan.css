@@ -319,7 +319,7 @@ h2 {
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
-    opacity: 0;
+    opacity: 1; /*------MISE--------*/
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
@@ -344,9 +344,9 @@ h2::after {
     width: 100%;
 }
 
-p {
+#paraHero {
     margin-bottom: 20px;
-    opacity: 0;
+    opacity: 1; /*------MISE--------*/
     transform: translateX(-30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
@@ -539,7 +539,7 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-p {
+#paraMain {
     font-size: 1rem;
     margin-bottom: 1rem;
 }
@@ -758,7 +758,7 @@ h2 {
     color: var(--primary-color);
 }
 
-p {
+#paraCard {
     margin-bottom: 1rem;
 }
 
@@ -1348,7 +1348,7 @@ button:hover::after {
     width: 100%;
 }
 
-.footer-section #dev-name,
+.footer-section p,
 .footer-section ul {
     font-size: 0.9em;
     line-height: 1.6;

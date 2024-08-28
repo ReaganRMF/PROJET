@@ -412,7 +412,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             ease: "power3.out",
         })
             .to(
-                section.querySelector("h2"),
+                section.querySelector(".content h2"),
                 {
                     opacity: 1,
                     y: 0,
@@ -421,7 +421,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 "-=0.6"
             )
             .to(
-                section.querySelectorAll("p"),
+                section.querySelectorAll(".content p"),
                 {
                     opacity: 1,
                     x: 0,
@@ -507,7 +507,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     // Text reveal animation
-    gsap.utils.toArray("p").forEach((p) => {
+    gsap.utils.toArray(".content p").forEach((p) => {
         let words = p.textContent.split(" ");
         p.innerHTML = words
             .map((word) => `<span class="word">${word}</span>`)
