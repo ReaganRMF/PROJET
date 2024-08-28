@@ -312,7 +312,7 @@ img {
     transform: scale(1.1) rotate(2deg);
 }
 
-h2 {
+.titreHero {
     font-family: 'Playfair Display', serif;
     color: var(--primary-color);
     font-size: 2.8em;
@@ -324,7 +324,7 @@ h2 {
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-h2::after {
+.titreHero::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -335,16 +335,16 @@ h2::after {
     transition: width 0.8s ease;
 }
 
-.section.visible h2 {
+.section.visible .titreHero {
     opacity: 1;
     transform: translateY(0);
 }
 
-.section.visible h2::after {
+.section.visible .titreHero::after {
     width: 100%;
 }
 
-#paraHero {
+.paraHero {
     margin-bottom: 20px;
     opacity: 1; /*------MISE--------*/
     transform: translateX(-30px);
@@ -533,13 +533,13 @@ main {
     z-index: 1;
 }
 
-h2 {
+.titreMain {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-#paraMain {
+.paraMain {
     font-size: 1rem;
     margin-bottom: 1rem;
 }
@@ -751,14 +751,14 @@ h2 {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-h2 {
+.titreCard {
     font-family: 'Merriweather', serif;
     font-size: 1.8rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
 
-#paraCard {
+.paraCard {
     margin-bottom: 1rem;
 }
 
