@@ -327,8 +327,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     });*/
 
-    
-    
+
+
     /*// Update active link on scroll
     function updateActiveLink() {
         let fromTop = window.scrollY + header.offsetHeight + 1;
@@ -524,5 +524,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 toggleActions: "play none none reverse",
             },
         });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    const svg = document.querySelector(".mon_logo");
+    svg.addEventListener("click", () => {
+        svg.style.transform = "scale(1.1)";
+        svg.style.transition = "transform 0.3s ease-in-out";
+        setTimeout(() => {
+            svg.style.transform = "scale(1)";
+        }, 300);
     });
 });
