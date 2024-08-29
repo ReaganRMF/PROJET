@@ -20,7 +20,6 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'New Amsterdam', sans-serif;
 }
 
 body {
@@ -28,6 +27,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    font-family: 'New Amsterdam', sans-serif;
     height: 100vh;
 
 }
