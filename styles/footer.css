@@ -1,0 +1,249 @@
+/*FOOTER*/
+.footer {
+    background: linear-gradient(135deg, #8e0e00, #1f1c18);
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="%23ffffff10" d="M0 0 L50 100 L100 0 Z" /></svg>');
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 1;
+    animation: backgroundShimmer 10s infinite alternate;
+}
+
+@keyframes backgroundShimmer {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    font-family: 'Merriweather', serif;
+    ;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-section:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.footer-section:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.footer-section:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.footer-section h3 {
+    font-family: 'Playfair Display', serif;
+    color: #f1c40f;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f1c40f;
+    transition: width 0.5s ease;
+}
+
+.footer-section:hover h3::after {
+    width: 100%;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-section ul li:hover {
+    transform: translateX(5px);
+}
+
+.footer-section ul li i {
+    margin-right: 10px;
+    color: #f1c40f;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1c40f;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover::before {
+    transform: translateY(0);
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.social-icons i {
+    color: #8e0e00;
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover i {
+    color: #fff;
+}
+
+.developer-info {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1f1c18;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.developer-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    animation: rotateLogo 10s linear infinite;
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wine-icon {
+    display: inline-block;
+    font-size: 2em;
+    margin-right: 10px;
+    animation: wine-pour 3s infinite;
+}
+
+@keyframes wine-pour {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(30deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: bubbleRise 8s infinite ease-in;
+}
+
+@keyframes bubbleRise {
+    0% {
+        transform: translateY(100%) scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
