@@ -159,6 +159,7 @@ h1 {
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .section-apropos.visible p {
