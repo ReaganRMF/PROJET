@@ -263,3 +263,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         fruit.style.animationDelay = `${index * 2}s`;
     });
 });
+
+
+document.getElementById("lien-whatsapp").addEventListener("click", function () {
+    const phoneNumber = "+243813297352";
+    const message = encodeURIComponent(
+        "Bonjour, je vous contacte à propos de vos vins."
+    );
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+});
