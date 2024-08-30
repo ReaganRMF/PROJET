@@ -278,7 +278,7 @@ document.getElementById("lien-gmail").addEventListener("click", () => {
     const message =
         "Je vous contacte apropos du site giardino king, je voudrait en savoir plus sur ça";
 
-    window.location.href = `mailto:reaganfukibulu43@gmail.com?${subject}=${message}`;
+    window.location.href = `mailto:reaganfukibulu43@gmail.com?subject=${subject}&body=${message}`, "_bank";
 });
 
 document
