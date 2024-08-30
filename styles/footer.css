@@ -138,6 +138,7 @@
     text-align: center;
     filter: grayscale(1);
     transition: 0.5s;
+    animation: infinite-move-logo 2s infinite alternate;
 }
 
 .div-img img:hover::before {
@@ -145,8 +146,15 @@
 }
 
 .div-img img:hover {
-    transform: translateY(-3px);
+    transition: filter 0.5s, transform 0.5s;
+    cursor: pointer;
+    animation: none;
     filter: grayscale(0);
+}
+
+@keyframes infinite-move-logo{
+    0%{filter: grayscale(0);transform: translateY(0);}
+    100%{filter: grayscale(1);transform: translateY(-3px);}
 }
 
 .developer-info {
