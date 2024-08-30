@@ -272,3 +272,11 @@ document.getElementById("lien-whatsapp").addEventListener("click", function () {
     );
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
 });
+
+document.getElementById("lien-gmail").addEventListener("click", () => {
+    const subject = "Bonjour devellopeur";
+    const message =
+        "Je vous contacte apropos du site giardino king, je voudrait en savoir plus sur ça";
+
+    window.location.href = `mailto:reaganfukibulu43@gmail.com?${subject}=${message}`;
+});
