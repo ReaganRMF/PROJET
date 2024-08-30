@@ -175,6 +175,18 @@
     animation: rotateLogo 10s linear infinite;
 }
 
+.developer-info p span{
+    transition: 0.5s;
+}
+
+.developer-info p span:hover{
+    transition: 0.5s;
+    cursor: pointer;
+    color: #8e0e00;
+    background-color: white;
+    border-radius: 15px;
+}
+
 @keyframes rotateLogo {
     0% {
         transform: rotate(0deg);

@@ -280,3 +280,13 @@ document.getElementById("lien-gmail").addEventListener("click", () => {
 
     window.location.href = `mailto:reaganfukibulu43@gmail.com?${subject}=${message}`;
 });
+
+document
+    .getElementById("lien-whatsapp-dev")
+    .addEventListener("click", () => {
+        const phoneNumber = "+243813297352";
+        const message = encodeURIComponent(
+            "Je vous contacte apropos du site giardino king, je voudrait en savoir plus sur ça"
+        );
+        window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+    });
