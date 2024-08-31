@@ -168,7 +168,7 @@ nav ul li a.active {
 
 @media (max-width: 768px) {
     .logo{
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
     .menu-icon {
