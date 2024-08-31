@@ -171,6 +171,11 @@ nav ul li a.active {
         font-size: 1.4rem;
         font-weight: 600;
     }
+    .mon_logo{
+        max-width: 40px;
+        height: auto;
+        margin-right: 7px;
+    }
     .menu-icon {
         display: block;
     }
