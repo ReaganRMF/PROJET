@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 document.getElementById("lien-whatsapp").addEventListener("click", function () {
-    const phoneNumber = "+243813297352";
+    const phoneNumber = "+32465199433";
     const message = encodeURIComponent(
         "Bonjour, je vous contacte à propos de vos vins."
     );
