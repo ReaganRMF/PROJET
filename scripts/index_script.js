@@ -541,7 +541,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 document.getElementById("lien-whatsapp").addEventListener("click", function () {
     const phoneNumber = "+32465199433";
     const message = encodeURIComponent(
-        "Bonjour, je vous contacte à propos de vos vins."
+        "Bonjour, je vous contacte à-propos de vos vins."
     );
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
 });
