@@ -264,6 +264,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 });
 
+document.getElementById("lien-gmail").addEventListener("click", () => {
+    const subject = "À-propos de giardino-king";
+    const message ="Je vous contacte apropos du vin giardino king, je voudrait en savoir plus sur ça";
+
+    (window.location.href = `mailto:jardinoking@gmail.com?subject=${subject}&body=${message}`),
+        "_bank";
+});
 
 document.getElementById("lien-whatsapp").addEventListener("click", function () {
     const phoneNumber = "+32465199433";
@@ -273,7 +280,7 @@ document.getElementById("lien-whatsapp").addEventListener("click", function () {
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
 });
 
-document.getElementById("lien-gmail").addEventListener("click", () => {
+document.getElementById("lien-gmail-dev").addEventListener("click", () => {
     const subject = "Bonjour devellopeur";
     const message =
         "Je vous contacte apropos du site giardino king, je voudrait en savoir plus sur ça";

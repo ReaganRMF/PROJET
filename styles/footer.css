@@ -157,6 +157,11 @@
     100%{filter: grayscale(1);transform: translateY(-3px);}
 }
 
+#lien-gmail:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    color: #f1c40f;
+}
 .developer-info {
     text-align: center;
     padding: 20px 0;

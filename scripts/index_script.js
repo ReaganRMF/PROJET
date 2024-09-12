@@ -203,30 +203,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         const submitButton = form.querySelector('button[type="submit"]');
         submitButton.disabled = true;
-        submitButton.textContent = "Envoi en cours...";
+        submitButton.textContent = "Redirection en cours...";
 
-        emailjs.sendForm("service_1u6gp6v", "template_y69f6ei", this).then(
-            function () {
-                showStatus("Message envoyé avec succès !", "success");
-                form.reset();
-                submitButton.disabled = false;
-                submitButton.textContent = "Envoyer l'email";
-            },
-            function (error) {
-                showStatus(
-                    "Erreur lors de l'envoi du message. Veuillez réessayer.",
-                    "error"
-                );
-                submitButton.disabled = false;
-                submitButton.textContent = "Envoyer l'email";
-            }
-        );
+        const subject = "À-propos du vin giardino-king";
+        const message = document.querySelector("#message");
+
+        (window.location.href = `mailto:jardinoking@gmail.com?subject=${subject}&body=${message}`), "_bank";
+        form.reset();
+        submitButton.textContent = "Envoyer l'email";
     });
 
     document
         .getElementById("whatsapp-btn")
         .addEventListener("click", function () {
-            const phoneNumber = "+32465199433" ;
+            const phoneNumber = "+32465199433";
             const message = encodeURIComponent(
                 "Bonjour, je vous contacte à propos de vos vins."
             );
@@ -538,6 +528,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 });
 
+document.getElementById("lien-gmail").addEventListener("click", () => {
+    const subject = "À-propos de giardino-king";
+    const message =
+        "Je vous contacte apropos du vin giardino king, je voudrait en savoir plus sur ça";
+
+    (window.location.href = `mailto:jardinoking@gmail.com?subject=${subject}&body=${message}`),
+        "_bank";
+});
+
 document.getElementById("lien-whatsapp").addEventListener("click", function () {
     const phoneNumber = "+32465199433";
     const message = encodeURIComponent(
@@ -546,7 +545,7 @@ document.getElementById("lien-whatsapp").addEventListener("click", function () {
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
 });
 
-document.getElementById("lien-gmail").addEventListener("click", () => {
+document.getElementById("lien-gmail-dev").addEventListener("click", () => {
     const subject = "Bonjour devellopeur";
     const message = encodeURIComponent("Je vous contacte apropos du site giardino king, je voudrait en savoir plus sur ça");
 
